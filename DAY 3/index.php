@@ -17,6 +17,9 @@ require 'delete.php';
     <title>Index</title>
 </head>
 
+
+
+
 <body>
     <div class="container">
         <ul class="nav justify-content-start menu">
