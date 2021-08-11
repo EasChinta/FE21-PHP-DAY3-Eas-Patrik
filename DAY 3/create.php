@@ -9,8 +9,6 @@ if(isset($_POST["submit"])){
 
     $sql = "INSERT INTO dishes (name, image, price, description) VALUES ('$name','$image','$price','$description')";
     if(mysqli_query($connect, $sql) == true){
-        echo "New dish added<br>
-        <a href='index.php'>Home</a>";
     }
 
 }

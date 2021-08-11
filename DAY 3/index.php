@@ -1,7 +1,5 @@
 <?php
 require 'db_connect.php';
-
-
 require 'create.php';
 require 'delete.php';
 ?>
@@ -29,11 +27,15 @@ require 'delete.php';
                 <a class="nav-link" href="index.php">Advanced</a>
             </li>
             <li class="nav-item active animate__animated animate__backInDown animate__delay-2s	">
-                <a class="nav-link" href="exercise6.php">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
             </li>
         </ul>
     </div>
     <div class="container">
+
+
+
+        <div class="row">
         <?php
 
         // if ($connect->connect_error) {
@@ -49,22 +51,24 @@ require 'delete.php';
 
 
 
-        foreach($rows as $val){
-            echo "<p>" .$val['name']." ".$val['price' ]."</p>";
-            echo '<div class="card" style="width: 18rem;">
-            <img src='.$val["image"].' class="card-img-top" alt="...">
+        foreach ($rows as $val) {
+            echo '<div class="container shadow mt-5 col col-12 col-sm-12 col-md-6 col-lg-3"
+            <div class="card" style="width: 18rem;">
+            <img src=' . $val["image"] . ' class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">'.$val["name"].'</h5>
-              <p class="card-text">'.$val["description"].'<br> '.$val["price"].'</p>
-              <a href="index.php?id='.$val["id"].'" class="btn btn-outline-success">Delete</a>
+              <h5 class="card-title">' . $val["name"] . '</h5>
+              <p class="card-text">' . $val["description"] . '<br> ' . $val["price"] . '</p>
+              <a href="index.php?id=' . $val["id"] . '" class="btn btn-outline-success">Delete</a>
             </div>
-          </div>';
+          </div>
 
-           
+          ';
         }
-    
+
 
         ?>
+
+</div>
 
         <form method="post">
             <input type="text" name="name" placeholder="name">
@@ -75,7 +79,6 @@ require 'delete.php';
         </form>
 
         <?php
-        
         ?>
 
 
