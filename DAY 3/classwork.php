@@ -60,11 +60,10 @@
         function exercise3()
         {
             for ($i = 0; $i < 10; $i++) {
-                $array[$i] = array(rand(1,10));
+                $array[$i] = array(rand(1, 10));
             }
             // print_r($array);
-            echo "<br>" .(max($array)[0]) . "<br>";
-            
+            echo "<br>" . (max($array)[0]) . "<br>";
         }
         exercise3();
         ?>
@@ -77,8 +76,17 @@
         <h1>EXERCISE 4</h1>
 
         <?php
-
-      
+        for ($i = 1; $i <= 100; $i++) {
+            if ($i % 15 == 0) {
+                echo "FullStack<br>";
+            } elseif ($i % 3  == 0) {
+                echo "Front-end<br>";
+            } elseif ($i % 5 == 0) {
+                echo "Back-end <br>";
+            } else {
+                echo $i . "<br>";
+            }
+        }
         ?>
     </section>
 
